@@ -24,8 +24,3 @@ jobs:
             . ~python/environments/calculator/bin/activate
             flake8 --exclude=calculator* --statistics
             pytest -v --cov=calculator
-
-  request-testing:
-    type: approval
-    requires:
-      - build
