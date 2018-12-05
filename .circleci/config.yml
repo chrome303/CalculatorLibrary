@@ -3,7 +3,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/python:3.7
+      - image: circleci/python:3.6
 
     working_directory: ~/python/projects/CalculatorLibrary/
 
@@ -14,7 +14,7 @@ jobs:
       - run:
           name: install dependencies
           command: |
-            python3 -m venv ~python/environments/calculator/
+            python3.6 -m venv ~python/environments/calculator/
             . ~python/environments/calculator/bin/activate
             pip install -r requirements.txt
       # Step 3: run linter and tests
